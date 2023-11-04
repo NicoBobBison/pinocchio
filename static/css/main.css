@@ -116,7 +116,7 @@ body {
     position: relative;
 }
 #ellipse {
-    width: 5px; 
+    width: 5px;
     height: 5px; 
     background: #86788E;
 }
@@ -124,6 +124,12 @@ body {
     width: 14px; 
     height: 16px; 
     position: relative;
+}
+#check {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    pointer-events: none
 }
 #plus {
     width: 16px; 
@@ -315,8 +321,8 @@ body {
     margin-top: 4px;
 
     border-radius: 6px;
-    border: 1px solid #E5E7EB;
-    background-image: url(images/check.png);
+    border: 1px solid #EB6172;
+    background-color: #EB6172;
 }
 .checkedBox:hover {
     cursor: pointer;

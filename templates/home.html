@@ -48,7 +48,9 @@
                             <button type="button" class="uncheckedBox"></button>
                             <span class="uncheckedText">{{todo.task_name}}</span>
                         {% else %}
-                            <button type="button" class="checkedBox"></button>
+                            <button type="button" class="checkedBox">
+                                <img src="{{url_for('static', filename='css/images/check.png')}}" id="check"/>
+                            </button>
                             <span class="checkedText">{{todo.task_name}}</span>
                         {% endif %}
                         <div class="date-container">
