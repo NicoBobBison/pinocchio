@@ -6,51 +6,66 @@
     <title>Pinocchio</title>
 </head>
 <body>
-    <div class="body-container">
-        <div class="navbar-container">
-            <div class="navbar-elements-container">
-                <div class="logo-container">
-                    <span id="logo-text">
-                        Pinnoch.io
-                    </span>
-                </div>
-                <div class="login-container">
-                    <button type="button" id="login-button">
-                        <img src="{{url_for('static', filename='css/images/person.png')}}" id="login-button-icon"/>
-                        <span id="button-text">
-                            Log in
+    <div class="global-container">
+        <div class="body-container">
+            <div class="navbar-container">
+                <div class="navbar-elements-container">
+                    <div class="logo-container">
+                        <span id="logo-text">
+                            Pinnoch.io
                         </span>
-                    </button>
-                </div>
-            </div>
-            <div class="navbar-break"></div>
-        </div>
-        <div class="title-section">
-            <span class="section-title">Pinnoch.io</span>
-            <div class="section-description">The checklist that lies to you about your deadlines!</div>
-        </div>
-        <div class="checklist-section">
-            <div class="checklist-header">
-                <div class="checklist-header-text">
-                    To-Do List
-                </div>
-                <div class="checklist-line-divider"></div>
-            </div>
-            <div class="task-section">
-                <img src="{{url_for('static', filename='css/images/plus-circle.png')}}" id="plus"/>
-                <span class="addTaskText">Add New Task</span>
-            </div>
-            <div class="task-section">
-<!--                <input class="uncheckedBox" type="checkbox">-->
-                <button type="button" class="uncheckedBox"></button>
-                <span class="uncheckedText">Unchecked</span>
-                <div class="date-container">
-                    <span class="date-text">October 12th, 2020</span>
-                    <div class="ellipse-align">
-                        <img src="{{url_for('static', filename='css/images/ellipse.png')}}" id="ellipse"/>
                     </div>
-                    <span class="time-text">4:20</span>
+                    <div class="login-container">
+                        <button type="button" id="login-button">
+                            <img src="{{url_for('static', filename='css/images/person.png')}}" id="login-button-icon"/>
+                            <span id="button-text">
+                                Log in
+                            </span>
+                        </button>
+                    </div>
                 </div>
+                <div class="navbar-break"></div>
+            </div>
+            <div class="title-section">
+                <span class="section-title">Pinnoch.io</span>
+                <div class="section-description">The checklist that lies to you about your deadlines!</div>
+            </div>
+            <div class="checklist-section">
+                <div class="checklist-header">
+                    <div class="checklist-header-text">
+                        To-Do List
+                    </div>
+                    <div class="checklist-line-divider"></div>
+                </div>
+                <div class="task-section">
+                    <img src="{{url_for('static', filename='css/images/plus-circle.png')}}" id="plus"/>
+                    <span class="addTaskText">Add New Task</span>
+                </div>
+                <div class="task-section">
+    <!--                <input class="uncheckedBox" type="checkbox">-->
+                    <button type="button" class="uncheckedBox"></button>
+                    <span class="uncheckedText">Unchecked</span>
+                    <div class="date-container">
+                        <span class="date-text">October 12th, 2020</span>
+                        <div class="ellipse-align">
+                            <img src="{{url_for('static', filename='css/images/ellipse.png')}}" id="ellipse"/>
+                        </div>
+                        <span class="time-text">4:20</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gradient-container">
+            <div class="gradient"></div>
+        </div>
+        <div class="colors-aligner">
+            <div class="colors-container">
+                <div style="width: 660.11px; height: 965.11px; left: 242px; top: -350.22px; position: absolute; transform: rotate(-16.48deg); transform-origin: 0 0; background: radial-gradient(99.96% 83.13% at -7272.74% 81.27%, rgba(251, 113, 133, 0.10) 0%, rgba(201.44, 60.67, 187.36, 0.10) 100%)"></div>
+                <div style="width: 660.11px; height: 965.11px; left: -687.16px; top: -489px; position: absolute; transform: rotate(40.45deg); transform-origin: 0 0; background: radial-gradient(100.02% 83.13% at 16203.33% 81.27%, rgba(255, 0, 0, 0.10) 21%, rgba(203.28, 165, 252, 0.10) 100%)"></div>
+                <div style="width: 2149px; height: 487px; left: -1071px; top: -400px; position: absolute; border: 10px #FFE0A3 solid"></div>
+                <div style="width: 210px; height: 202px; left: -1111px; top: -300px; position: absolute; border-radius: 9999px; border: 15px #EB61AB solid"></div>
+                <div style="width: 698px; height: 392px; left: 118px; top: -450px; position: absolute; border-radius: 9999px; border: 15px #FFE0A3 solid"></div>
+                <div style="width: 698px; height: 392px; left: -828px; top: -200px; position: absolute; border-radius: 9999px; border: 14px #E77B4D solid"></div>
             </div>
         </div>
     </div>
