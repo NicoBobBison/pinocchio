@@ -22,7 +22,7 @@ body {
     align-self: stretch;
     padding-left: 30px; 
     padding-right: 30px; 
-    padding-top: 10px; 
+    padding-top: 8px; 
     padding-bottom: 16px; 
     justify-content: space-between; 
     display: inline-flex;
@@ -80,7 +80,13 @@ body {
 #ellipse {
     width: 5px; 
     height: 5px; 
-    background: #86788E; 
+    background: #86788E;
+}
+#plus {
+    width: 16px; 
+    height: 16px;
+    position: relative;
+    padding-top: 3px;
 }
 .ellipse-align{
     justify-content: flex-start; 
@@ -213,7 +219,7 @@ body {
     border: 1px #E5E7EB solid; 
     justify-content: flex-start;
     gap: 16px; 
-    display: inline-flex
+    display: inline-flex;
     /*display: flex;
     width: 800px;
     padding: 14px 16px;
@@ -252,6 +258,15 @@ body {
     font-weight: 500;
     line-height: 24px; /* 150% */
     letter-spacing: 0.08px;
+}
+.addTaskText {
+    color: #EB6172; 
+    font-size: 16px; 
+    font-family: Inter; 
+    font-weight: 500; 
+    line-height: 24px; 
+    letter-spacing: 0.08px; 
+    word-wrap: break-word
 }
 .date-container {
     display: flex;
