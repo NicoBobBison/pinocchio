@@ -37,19 +37,20 @@
                     </div>
                     <div class="checklist-line-divider"></div>
                 </div>
-                <div class="task-section">
+                <div class="add-task-section">
                     <img src="{{url_for('static', filename='css/images/plus-circle.png')}}" id="plus"/>
                     <span class="addTaskText">Add New Task</span>
                 </div>
-                {% for todo in todo_list %}
+                    {% for todo in todo_list %}
                     <div class="task-section">
         <!--                <input class="uncheckedBox" type="checkbox">-->
                         {% if todo.complete == False %}
                             <button type="button" class="uncheckedBox"></button>
+                            <span class="uncheckedText">{{todo.task_name}}</span>
                         {% else %}
                             <button type="button" class="checkedBox"></button>
+                            <span class="checkedText">{{todo.task_name}}</span>
                         {% endif %}
-                        <span class="uncheckedText">{{todo.task_name}}</span>
                         <div class="date-container">
                             <span class="date-text">{{todo.due_date}}</span>
                             <span class="text-eclipse">*</span>

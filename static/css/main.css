@@ -246,7 +246,7 @@ body {
     background: #E5E7EB;
 }
 
-.task-section {
+.add-task-section {
     align-self: stretch;
     padding-left: 16px; 
     padding-right: 16px; 
@@ -264,6 +264,25 @@ body {
     align-items: flex-start;
     gap: 16px;*/
 }
+.task-section {
+    align-self: stretch;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    background: white;
+    border-radius: 6px;
+    border: 1px #E5E7EB solid;
+    justify-content: flex-start;
+    gap: 16px;
+    display: inline-flex;
+    /*display: flex;
+    width: 800px;
+    padding: 14px 16px;
+    align-items: flex-start;
+    gap: 16px;*/
+}
+
 .uncheckedBox {
     display: flex;
     width: 16px;
@@ -307,7 +326,7 @@ body {
     word-wrap: break-word
 }
 .checkedText {
-    color: #1F2937;
+    color: red;
     font-family: Inter;
     font-size: 16px;
     font-style: normal;
