@@ -1,14 +1,14 @@
 body {
     background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
 }
-#navbar-container {
+.navbar-container {
     display: flex;
     padding: 16px 30px;
     justify-content: space-between;
     align-items: flex-start;
     align-self: stretch;
 }
-#logo-container {
+.logo-container {
     display: flex;
     height: 40px;
     align-items: center;
@@ -22,7 +22,7 @@ body {
     line-height: normal;
     letter-spacing: -0.78px;
 }
-#login-container {
+.login-container {
     display: flex;
     padding: 10px 12px;
     justify-content: center;
@@ -46,19 +46,19 @@ body {
     letter-spacing: 0.075px;
 }
 
-#navbar-break {
+.navbar-break {
     height: 1px;
     align-self: stretch;
     background: #E5E7EB;
 }
-#title-section{
+.title-section{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 35px;
     flex-shrink: 0;
 }
-#title-container {
+.title-container {
     display: flex;
     width: 580px;
     padding: 20px 0px;
@@ -66,7 +66,7 @@ body {
     align-items: center;
     gap: 25px;
 }
-#section-title {
+.section-title {
     color: #000;
     font-family: Inter;
     font-size: 60px;
@@ -75,7 +75,7 @@ body {
     line-height: normal;
     letter-spacing: -1.8px;
 }
-#section-description {
+.section-description {
     align-self: stretch;
     color: #86788E;
     text-align: center;
@@ -87,7 +87,7 @@ body {
     letter-spacing: 0.1px;
 }
 
-#checklist-section{
+.checklist-section{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,7 +95,7 @@ body {
     flex-shrink: 0;
 }
 
-#checklist-container{
+.checklist-container{
     display: flex;
     width: 980px;
     height: 801px;
@@ -108,13 +108,13 @@ body {
     background: #FFF;
 }
 
-#checklist-header{
+.checklist-header{
     height: 50px;
     flex-shrink: 0;
     align-self: stretch;
 }
 
-#checklist-header-text{
+.checklist-header-text{
     width: 900px;
     height: 33.333px;
     flex-shrink: 0;
@@ -127,9 +127,63 @@ body {
     letter-spacing: 0.09px;
 }
 
-#checklist-line-divider{
+.checklist-line-divider{
     width: 900px;
     height: 1px;
     flex-shrink: 0;
     background: #E5E7EB;
+}
+
+.task-section {
+    display: flex;
+    width: 800px;
+    padding: 14px 16px;
+    align-items: flex-start;
+    gap: 16px;
+}
+.uncheckedBox {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4px;
+
+    border-radius: 6px;
+    border: 1px solid #E5E7EB;
+    background: #FFF;
+}
+.uncheckedText {
+    color: #1F2937;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.08px;
+}
+.date-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    flex: 1 0 0;
+}
+.date-text {
+    color: #86788E;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.07px;
+}
+.time-text {
+    color: #EB6172;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.07px;
 }
