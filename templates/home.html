@@ -66,6 +66,23 @@
                 <div style="width: 210px; height: 202px; left: -1111px; top: -300px; position: absolute; border-radius: 9999px; border: 15px #EB61AB solid"></div>
                 <div style="width: 698px; height: 392px; left: 118px; top: -450px; position: absolute; border-radius: 9999px; border: 15px #FFE0A3 solid"></div>
                 <div style="width: 698px; height: 392px; left: -828px; top: -200px; position: absolute; border-radius: 9999px; border: 14px #E77B4D solid"></div>
+                <div class="checklist-line-divider"></div>
+                {% for todo in todo_list %}
+                    <div class="task-section">
+        <!--                <input class="uncheckedBox" type="checkbox">-->
+                        {% if todo.complete == False %}
+                            <button type="button" class="uncheckedBox"></button>
+                        {% else %}
+                            <button type="button" class="checkedBox"></button>
+                        {% endif %}
+                        <span class="uncheckedText">{{todo.task_name}}</span>
+                        <div class="date-container">
+                            <span class="date-text">{{todo.due_date}}</span>
+                            <span class="text-eclipse">*</span>
+                            <span class="time-text">4:20</span>
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>

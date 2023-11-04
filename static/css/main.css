@@ -306,6 +306,17 @@ body {
     letter-spacing: 0.08px; 
     word-wrap: break-word
 }
+.checkedText {
+    color: #1F2937;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.08px;
+    opacity: 0.3;
+}
+
 .date-container {
     display: flex;
     justify-content: flex-end;
