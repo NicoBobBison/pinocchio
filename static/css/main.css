@@ -220,6 +220,18 @@ body {
     border: 1px solid #E5E7EB;
     background: #FFF;
 }
+.checkedBox{
+    display: flex;
+    width: 16px;
+    height: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4px;
+
+    border-radius: 6px;
+    border: 1px solid #E5E7EB;
+    background-image: url(images/check.png);
+}
 .uncheckedText {
     color: #1F2937;
     font-family: Inter;
