@@ -346,15 +346,14 @@ body {
     word-wrap: break-word
 }
 .checkedText {
-    color: red;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px; /* 150% */
-    letter-spacing: 0.08px;
-    opacity: 0.3;
-    text-decoration: line-through;
+    color: #86788E; 
+    font-size: 16px; 
+    font-family: Inter; 
+    font-weight: 500; 
+    text-decoration: line-through; 
+    line-height: 24px; 
+    letter-spacing: 0.08px; 
+    word-wrap: break-word;
 }
 
 .date-container {
