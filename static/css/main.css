@@ -5,3 +5,11 @@
     font-weight: 700;
     word-wrap: break-word
 }
+#NavBar{
+    width: 100%; height: 100%; background: white; flex-direction: column; justify-content: center; align-items: flex-start; display: inline-flex
+}
+
+#InsideNavBar{
+align-self: stretch; padding-left: 30px; padding-right: 30px; padding-top: 16px; padding-bottom: 16px; justify-content: space-between; align-items: flex-start; display: inline-flex
+}
+
