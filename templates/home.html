@@ -8,21 +8,23 @@
 <body>
     <div class="body-container">
         <div class="navbar-container">
-            <div class="logo-container">
-                <span id="logo-text">
-                    Pinnoch.io
-                </span>
-            </div>
-            <div class="login-container">
-                <button type="button" id="login-button">
-                    <img src="{{url_for('static', filename='images/person.png')}}" id="login-button-icon"/>
-                    <span id="button-text">
-                        Log in
+            <div class="navbar-elements-container">
+                <div class="logo-container">
+                    <span id="logo-text">
+                        Pinnoch.io
                     </span>
-                </button>
+                </div>
+                <div class="login-container">
+                    <button type="button" id="login-button">
+                        <img src="{{url_for('static', filename='images/person.png')}}" id="login-button-icon"/>
+                        <span id="button-text">
+                            Log in
+                        </span>
+                    </button>
+                </div>
             </div>
+            <div class="navbar-break"></div>
         </div>
-        <div class="navbar-break"></div>
         <div class="title-section">
             <div class="title-container">
                 <span class="section-title">Pinnoch.io</span>
