@@ -11,7 +11,22 @@ body {
     display: inline-flex;
 }
 .navbar-container {
+    align-self: stretch; 
+    background: white; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-start; 
+    display: flex;
+}
+.navbar-elements-container {
     align-self: stretch;
+    padding-left: 30px; 
+    padding-right: 30px; 
+    padding-top: 10px; 
+    padding-bottom: 16px; 
+    justify-content: space-between; 
+    display: inline-flex;
+    /*align-self: stretch;
     height: 73px;
     padding-left: 30px;
     padding-right: 30px;
@@ -19,7 +34,7 @@ body {
     padding-bottom: 16px;
     justify-content: space-between;
     align-items: flex-start;
-    display: inline-flex;
+    display: inline-flex;*/
     /*display: flex;
     padding: 16px 30px;
     justify-content: space-between;
@@ -30,7 +45,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     gap: 12px;
-    display: inline-flex;
+    display: flex;
 }
 #logo-text {
     color: black; 
