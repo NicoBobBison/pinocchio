@@ -5,3 +5,4 @@ __pycache__/main.cpython-312.pyc
 *.pyc
 *.pyc
 *.pyc
+*.sqlite
