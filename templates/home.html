@@ -6,47 +6,52 @@
     <title>Pinocchio</title>
 </head>
 <body>
-    <div class="navbar-container">
-        <div class="logo-container">
-            Pinnoch.io
-        </div>
-        <div class="login-container">
-            <button type="button" id="login-button">
-                <span id="button-text">
-                    🙍‍♂️Log in
+    <div class="body-container">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <span id="logo-text">
+                    Pinnoch.io
                 </span>
-            </button>
-        </div>
-    </div>
-    <div class="navbar-break"></div>
-    <div class="title-section">
-        <div class="title-container">
-            <span class="section-title">Pinnoch.io</span>
-            <div class="section-description">The checklist that lies to you about your deadlines!</div>
-        </div>
-    </div>
-    <div class="checklist-section">
-        <div class="checklist-container">
-            <div class="checklist-header">
-                <div class="checklist-header-text">
-                    To-Do List
-                    <img src="images/check.png" alt="Girl in a jacket" width="500" height="600">
-                    <img src="{{url_for('static', filename='check.png')}}"/>
-                </div>
             </div>
-            <div class="checklist-line-divider"></div>
-
-            <div class="task-section">
-<!--                <input class="uncheckedBox" type="checkbox">-->
-                <button type="button" class="uncheckedBox"></button>
-                <span class="uncheckedText">Unchecked</span>
-                <div class="date-container">
-                    <span class="date-text">October 12th, 2020</span>
-                    <span class="text-eclipse">*</span>
-                    <span class="time-text">4:20</span>
-                </div>
+            <div class="login-container">
+                <button type="button" id="login-button">
+                    <img src="{{url_for('static', filename='images/person.png')}}" id="login-button-icon"/>
+                    <span id="button-text">
+                        Log in
+                    </span>
+                </button>
             </div>
-
+        </div>
+        <div class="navbar-break"></div>
+        <div class="title-section">
+            <div class="title-container">
+                <span class="section-title">Pinnoch.io</span>
+                <div class="section-description">The checklist that lies to you about your deadlines!</div>
+            </div>
+        </div>
+        <div class="checklist-section">
+            <div class="checklist-container">
+                <div class="checklist-header">
+                    <div class="checklist-header-text">
+                        To-Do List
+                        <img src="images/check.png" alt="Girl in a jacket" width="500" height="600">
+                        <img src="{{url_for('static', filename='images/check.png')}}"/>
+                    </div>
+                </div>
+                <div class="checklist-line-divider"></div>
+    
+                <div class="task-section">
+    <!--                <input class="uncheckedBox" type="checkbox">-->
+                    <button type="button" class="uncheckedBox"></button>
+                    <span class="uncheckedText">Unchecked</span>
+                    <div class="date-container">
+                        <span class="date-text">October 12th, 2020</span>
+                        <span class="text-eclipse">*</span>
+                        <span class="time-text">4:20</span>
+                    </div>
+                </div>
+    
+            </div>
         </div>
     </div>
 </body>
