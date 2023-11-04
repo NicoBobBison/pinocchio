@@ -52,9 +52,14 @@
                             <span class="checkedText">{{todo.task_name}}</span>
                         {% endif %}
                         <div class="date-container">
-                            <span class="date-text">{{todo.due_date}}</span>
-                            <span class="text-eclipse">*</span>
+                            <span class="date-text">October 12th, 2020</span>
+                            <div class="ellipse-align">
+                                <img src="{{url_for('static', filename='css/images/ellipse.png')}}" id="ellipse"/>
+                            </div>
                             <span class="time-text">4:20</span>
+                            <div class="trash-can">
+                                <img src="{{url_for('static', filename='css/images/trash-can.png')}}" id="trash-can"/>
+                            </div>
                         </div>
                     </div>
                 {% endfor %}
