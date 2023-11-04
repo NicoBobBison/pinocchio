@@ -16,7 +16,7 @@
                 </div>
                 <div class="login-container">
                     <button type="button" id="login-button">
-                        <img src="{{url_for('static', filename='images/person.png')}}" id="login-button-icon"/>
+                        <img src="{{url_for('static', filename='css/images/person.png')}}" id="login-button-icon"/>
                         <span id="button-text">
                             Log in
                         </span>
@@ -26,32 +26,27 @@
             <div class="navbar-break"></div>
         </div>
         <div class="title-section">
-            <div class="title-container">
-                <span class="section-title">Pinnoch.io</span>
-                <div class="section-description">The checklist that lies to you about your deadlines!</div>
-            </div>
+            <span class="section-title">Pinnoch.io</span>
+            <div class="section-description">The checklist that lies to you about your deadlines!</div>
         </div>
         <div class="checklist-section">
-            <div class="checklist-container">
-                <div class="checklist-header">
-                    <div class="checklist-header-text">
-                        To-Do List
-                        <img src="{{url_for('static', filename='images/check.png')}}"/>
-                    </div>
+            <div class="checklist-header">
+                <div class="checklist-header-text">
+                    To-Do List
                 </div>
                 <div class="checklist-line-divider"></div>
-    
-                <div class="task-section">
-    <!--                <input class="uncheckedBox" type="checkbox">-->
-                    <button type="button" class="uncheckedBox"></button>
-                    <span class="uncheckedText">Unchecked</span>
-                    <div class="date-container">
-                        <span class="date-text">October 12th, 2020</span>
-                        <span class="text-eclipse">*</span>
-                        <span class="time-text">4:20</span>
+            </div>
+            <div class="task-section">
+<!--                <input class="uncheckedBox" type="checkbox">-->
+                <button type="button" class="uncheckedBox"></button>
+                <span class="uncheckedText">Unchecked</span>
+                <div class="date-container">
+                    <span class="date-text">October 12th, 2020</span>
+                    <div class="ellipse-align">
+                        <img src="{{url_for('static', filename='css/images/ellipse.png')}}" id="ellipse"/>
                     </div>
+                    <span class="time-text">4:20</span>
                 </div>
-    
             </div>
         </div>
     </div>

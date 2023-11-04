@@ -26,20 +26,6 @@ body {
     padding-bottom: 16px; 
     justify-content: space-between; 
     display: inline-flex;
-    /*align-self: stretch;
-    height: 73px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    justify-content: space-between;
-    align-items: flex-start;
-    display: inline-flex;*/
-    /*display: flex;
-    padding: 16px 30px;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-self: stretch;*/
 }
 .logo-container {
     justify-content: flex-start;
@@ -55,22 +41,10 @@ body {
     word-wrap: break-word;
 }
 .login-container {
-    /*width: 100%;
-    height: 100%;
-    justify-content: flex-start; 
-    align-items: center; 
-    gap: 20px; 
-    display: inline-flex*/
-
     justify-content: flex-start; 
     align-items: center; 
     gap: 20px; 
     display: flex;
-    /*display: flex;
-    padding: 10px 12px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;*/
 }
 #login-button {
     padding-left: 12px; 
@@ -103,6 +77,17 @@ body {
     height: 14px;
     position: relative;
 }
+#ellipse {
+    width: 5px; 
+    height: 5px; 
+    background: #86788E; 
+}
+.ellipse-align{
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 8px; 
+    display: inline-flex;
+}
 
 .navbar-break {
     height: 1px;
@@ -110,11 +95,13 @@ body {
     background: #E5E7EB;
 }
 .title-section{
+    padding-top: 20px; 
+    padding-bottom: 20px; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 25px; 
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 35px;
-    flex-shrink: 0;
 }
 .title-container {
     display: flex;
@@ -145,18 +132,28 @@ body {
     letter-spacing: 0.1px;
 }
 
-.checklist-section{
-    display: flex;
+.checklist-section {
+    padding-left: 40px; 
+    padding-right: 40px; 
+    padding-top: 20px; 
+    padding-bottom: 20px; 
+    background: white; 
+    border-radius: 15px; 
+    overflow: hidden; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 10px; 
+    display: flex
+    /*display: flex;
     flex-direction: column;
     align-items: center;
     gap: 35px;
-    flex-shrink: 0;
+    flex-shrink: 0;*/
 }
 
 .checklist-container{
     display: flex;
-    width: 980px;
-    height: 801px;
     padding: 20px 40px;
     flex-direction: column;
     align-items: center;
@@ -167,13 +164,24 @@ body {
 }
 
 .checklist-header{
-    height: 50px;
-    flex-shrink: 0;
-    align-self: stretch;
+    width: 900px;
+    height: 50px; 
+    position: relative;
 }
 
 .checklist-header-text{
-    width: 900px;
+    width: 900px; 
+    height: 33.33px; 
+    left: 0px; 
+    top: 0px; 
+    position: absolute; 
+    color: black; 
+    font-size: 18px; 
+    font-family: Inter; 
+    font-weight: 600; 
+    letter-spacing: 0.09px; 
+    word-wrap: break-word
+    /*width: 900px;
     height: 33.333px;
     flex-shrink: 0;
     color: #000;
@@ -182,22 +190,35 @@ body {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    letter-spacing: 0.09px;
+    letter-spacing: 0.09px;*/
 }
 
 .checklist-line-divider{
-    width: 900px;
-    height: 1px;
-    flex-shrink: 0;
+    width: 900px; 
+    height: 1px; 
+    left: 0px; 
+    top: 32px;
+    position: relative;
     background: #E5E7EB;
 }
 
 .task-section {
-    display: flex;
+    align-self: stretch;
+    padding-left: 16px; 
+    padding-right: 16px; 
+    padding-top: 14px; 
+    padding-bottom: 14px; 
+    background: white; 
+    border-radius: 6px; 
+    border: 1px #E5E7EB solid; 
+    justify-content: flex-start;
+    gap: 16px; 
+    display: inline-flex
+    /*display: flex;
     width: 800px;
     padding: 14px 16px;
     align-items: flex-start;
-    gap: 16px;
+    gap: 16px;*/
 }
 .uncheckedBox {
     display: flex;
@@ -210,6 +231,18 @@ body {
     border-radius: 6px;
     border: 1px solid #E5E7EB;
     background: #FFF;
+}
+.checkedBox{
+    display: flex;
+    width: 16px;
+    height: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4px;
+
+    border-radius: 6px;
+    border: 1px solid #E5E7EB;
+    background-image: url(images/check.png);
 }
 .uncheckedText {
     color: #1F2937;
