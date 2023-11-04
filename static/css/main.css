@@ -269,6 +269,9 @@ body {
     align-items: flex-start;
     gap: 16px;*/
 }
+.add-task-section:hover {
+    cursor: pointer;
+}
 .task-section {
     align-self: stretch;
     padding-left: 16px;
@@ -300,6 +303,9 @@ body {
     border: 1px solid #E5E7EB;
     background: #FFF;
 }
+.uncheckedBox:hover {
+    cursor: pointer;
+}
 .checkedBox{
     display: flex;
     width: 16px;
@@ -311,6 +317,9 @@ body {
     border-radius: 6px;
     border: 1px solid #E5E7EB;
     background-image: url(images/check.png);
+}
+.checkedBox:hover {
+    cursor: pointer;
 }
 .uncheckedText {
     color: #1F2937;
@@ -339,6 +348,7 @@ body {
     line-height: 24px; /* 150% */
     letter-spacing: 0.08px;
     opacity: 0.3;
+    text-decoration: line-through;
 }
 
 .date-container {
@@ -376,4 +386,7 @@ body {
     align-items: center; 
     gap: 10px; 
     display: inline-flex;
+}
+.trash-can:hover {
+    cursor: pointer;
 }
