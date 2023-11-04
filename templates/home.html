@@ -41,18 +41,23 @@
                     </div>
                 </div>
                 <div class="checklist-line-divider"></div>
-    
-                <div class="task-section">
-    <!--                <input class="uncheckedBox" type="checkbox">-->
-                    <button type="button" class="checkedBox"></button>
-                    <span class="uncheckedText">Unchecked</span>
-                    <div class="date-container">
-                        <span class="date-text">October 12th, 2020</span>
-                        <span class="text-eclipse">*</span>
-                        <span class="time-text">4:20</span>
+                {% for todo in todo_list %}
+                    <div class="task-section">
+        <!--                <input class="uncheckedBox" type="checkbox">-->
+                        {% if todo.complete == False %}
+                            <button type="button" class="uncheckedBox"></button>
+                        {% else %}
+                            <button type="button" class="checkedBox"></button>
+                        {% endif %}
+                        <span class="uncheckedText">{{todo.task_name}}</span>
+                        <div class="date-container">
+                            <span class="date-text">October 12th, 2020</span>
+                            <span class="text-eclipse">*</span>
+                            <span class="time-text">4:20</span>
+                        </div>
                     </div>
-                </div>
-    
+                {% endfor %}
+
             </div>
         </div>
     </div>
