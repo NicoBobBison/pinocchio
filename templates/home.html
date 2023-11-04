@@ -16,7 +16,7 @@
                 </div>
                 <div class="login-container">
                     <button type="button" id="login-button">
-                        <img src="{{url_for('static', filename='images/person.png')}}" id="login-button-icon"/>
+                        <img src="{{url_for('static', filename='css/images/person.png')}}" id="login-button-icon"/>
                         <span id="button-text">
                             Log in
                         </span>
@@ -42,7 +42,9 @@
                 <span class="uncheckedText">Unchecked</span>
                 <div class="date-container">
                     <span class="date-text">October 12th, 2020</span>
-                    <span class="text-eclipse">*</span>
+                    <div class="ellipse-align">
+                        <img src="{{url_for('static', filename='css/images/ellipse.png')}}" id="ellipse"/>
+                    </div>
                     <span class="time-text">4:20</span>
                 </div>
             </div>

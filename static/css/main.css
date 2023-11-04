@@ -76,6 +76,17 @@ body {
     height: 14px;
     position: relative;
 }
+#ellipse {
+    width: 5px; 
+    height: 5px; 
+    background: #86788E; 
+}
+.ellipse-align{
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 8px; 
+    display: inline-flex;
+}
 
 .navbar-break {
     height: 1px;
