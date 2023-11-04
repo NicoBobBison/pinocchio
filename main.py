@@ -22,10 +22,11 @@ def home_page():
 
 @app.route('/add', methods=['POST'])
 def add():
+    # get("") should take in the name of the input field for the name
     task_name = request.form.get("task_name")
     db.session.add(Todo(task_name=task_name, complete=False))
     db.session.commit()
-    return redirect(url_for("home"))
+    return redirect(url_for("home_page"))
 
 
 if __name__ == '__main__':

@@ -49,15 +49,14 @@
                         {% else %}
                             <button type="button" class="checkedBox"></button>
                         {% endif %}
-                        <span class="checkedText">{{todo.task_name}}</span>
+                        <span class="uncheckedText">{{todo.task_name}}</span>
                         <div class="date-container">
-                            <span class="date-text">October 12th, 2020</span>
+                            <span class="date-text">{{todo.due_date}}</span>
                             <span class="text-eclipse">*</span>
                             <span class="time-text">4:20</span>
                         </div>
                     </div>
                 {% endfor %}
-
             </div>
         </div>
     </div>
