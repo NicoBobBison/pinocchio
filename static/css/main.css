@@ -120,6 +120,11 @@ body {
     height: 5px; 
     background: #86788E;
 }
+#trash-can {
+    width: 14px; 
+    height: 16px; 
+    position: relative;
+}
 #plus {
     width: 16px; 
     height: 16px;
@@ -341,4 +346,15 @@ body {
     font-weight: 700;
     line-height: 20px; /* 142.857% */
     letter-spacing: 0.07px;
+}
+.trash-can {
+    background: #EB6172; 
+    width: 24px; 
+    height: 24px;
+    border-radius: 5px; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    display: inline-flex;
 }
