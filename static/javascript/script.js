@@ -1,5 +1,6 @@
 const taskSection = document.querySelector(".checklist-section")
-let taskId = 0;
+const modalOverlay = document.querySelector(".modal-overlay")
+const modalContainer = document.querySelector(".modal-container")
 
 taskSection.addEventListener("click", function (e) {
     if(e.target.tagName === "BUTTON") {
@@ -26,6 +27,12 @@ taskSection.addEventListener("click", function (e) {
     }
 }, false)
 
-function addTask() {
-    alert("creating task with: " + taskId)
+function openModal() {
+    if (modalOverlay.style.display === "flex") {
+        modalOverlay.style.display = "none";
+        modalContainer.style.display = "none";
+    } else {
+        modalOverlay.style.display = "flex";
+        modalContainer.style.display = "inline-flex";
+    }
 }
