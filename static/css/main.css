@@ -19,8 +19,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    padding-top: 64px; 
-    padding-bottom: 690px;
+    padding-top: 64px;
+    padding-bottom: 0px;
     z-index: -2; /* Specify a stack order in case you're using a different order for other elements */
 }
 .colors-aligner {
@@ -30,6 +30,7 @@ body {
     justify-content: flex-start; 
     align-items: center; 
     display: inline-flex;
+    /* overflow: hidden; */
 }
 .colors-container {
     filter: blur(120px);
@@ -107,7 +108,7 @@ body {
     letter-spacing: 0.075px;
     word-wrap: break-word;
 }
-#login-button-icon {
+.login-button-icon {
     width: 14px; 
     height: 14px;
     position: relative;
