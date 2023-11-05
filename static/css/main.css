@@ -84,7 +84,7 @@ body {
     gap: 20px; 
     display: flex;
 }
-#login-button {
+.button {
     padding-left: 12px; 
     padding-right: 12px; 
     padding-top: 10px; 
@@ -489,10 +489,11 @@ body {
     display: inline-flex;
 }
 .modal-input-holder {
-    align-self: stretch; 
+    width: auto; 
     flex: 1 1 0; 
+    width: 0px;
     padding-left: 12px; 
-    padding-right: 12px; 
+    padding-right: 12px;
     padding-top: 10px; 
     padding-bottom: 10px; 
     background: white; 
@@ -501,10 +502,26 @@ body {
     justify-content: flex-start; 
     align-items: flex-start; 
     gap: 10px; 
-    display: inline-flex
+    display: inline-flex;
+
+    color: #86788E;
+    font-size: 15px; 
+    font-family: Inter;
+    font-weight: 400; 
+    letter-spacing: 0.07px; 
+    word-wrap: break-word;
+}
+.modal-input-holder::placeholder {
+    color: #86788E;
+    opacity: 1; /* Firefox */
+  }
+  
+.modal-input-holder::-ms-input-placeholder { /* Edge 12 -18 */
+    color: #86788E;
 }
 .modal-input-dropdown {
-    width: 64px;
+    align-self: stretch;
+    width: 80px;
     padding-left: 12px;
     padding-top: 10px; 
     padding-bottom: 10px; 
@@ -515,6 +532,13 @@ body {
     align-items: flex-start; 
     gap: 10px; 
     display: flex;
+
+    color: #86788E; 
+    font-size: 15px; 
+    font-family: Inter;
+    font-weight: 400; 
+    letter-spacing: 0.07px; 
+    word-wrap: break-word;
 }
 #modal-input-text {
     color: #86788E; 
@@ -552,4 +576,13 @@ body {
     width: 38px; 
     height: 38px;
     position: relative;
+}
+
+select {
+    padding: 10px 10px;
+    appearance: none;
+    background-image: url("images/up.png");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 14px;
 }
