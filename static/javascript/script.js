@@ -27,15 +27,4 @@ taskSection.addEventListener("click", function (e) {
 
 function addTask() {
     alert("creating task with: " + taskId)
-
-    // let li = document.createElement("li");
-    // li.innerHTML = inputBox.value;
-    // listContainer.appendChild(li);
-    // inputBox.value = "";
-    //
-    // let span = document.createElement("span");
-    // span.innerHTML = "\u00d7";
-    // li.appendChild(span);
-
-    taskId = taskId + 1;
 }

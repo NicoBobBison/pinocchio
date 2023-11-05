@@ -81,6 +81,24 @@
                 <div class="checklist-line-divider"></div>
             </div>
         </div>
+        <div class="model">
+            <h1>Create Task</h1>
+            <label for="name">Name</label>
+            <input type="text" id="name"/>
+
+            <label for="date">Date</label>
+            <input type="date" id="date"/>
+
+            <div class="time-container">
+                <label for="hour">Hour</label>
+                <input type="text" id="hour"/>
+
+                <label for="minute">Minute</label>
+                <input type="text" id="minute"/>
+            </div>
+
+            <button type="button" id="submit">Submit</button>
+        </div>
     </div>
     <script src="{{url_for('static', filename='javascript/script.js')}}"></script>
 </body>
