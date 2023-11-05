@@ -54,7 +54,7 @@
                             <span class="checkedText">{{todo.task_name}}</span>
                         {% endif %}
                         <div class="date-container">
-                            <span class="date-text">October 12th, 2020</span>
+                            <span class="date-text">{{todo.due_date}}</span>
                             <div class="ellipse-align">
                                 <img src="{{url_for('static', filename='css/images/ellipse.png')}}" id="ellipse"/>
                             </div>
@@ -83,10 +83,10 @@
                 <div class="checklist-line-divider"></div>
             </div>
         </div>
-        <div class="model">
+        <form class="model" action="/add" method="post">
             <h1>Create Task</h1>
-            <label for="name">Name</label>
-            <input type="text" id="name"/>
+            <label for="task_name">Name</label>
+            <input type="text" name="task_name" id="task_name"/>
 
             <label for="date">Date</label>
             <input type="date" id="date"/>
@@ -98,9 +98,8 @@
                 <label for="minute">Minute</label>
                 <input type="text" id="minute"/>
             </div>
-
-            <button type="button" id="submit">Submit</button>
-        </div>
+            <button type="submit" id="submit">Submit</button>
+        </form>
     </div>
     <script src="{{url_for('static', filename='javascript/script.js')}}"></script>
 </body>

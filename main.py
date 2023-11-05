@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
@@ -11,6 +12,8 @@ class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     task_name = db.Column(db.String(100))
     complete = db.Column(db.Boolean)
+    input_date = db.Column(db.DateTime)
+    due_date = db.Column(db.DateTime)
 
 
 @app.route('/')
@@ -24,7 +27,8 @@ def home_page():
 def add():
     # get("") should take in the name of the input field for the name
     task_name = request.form.get("task_name")
-    db.session.add(Todo(task_name=task_name, complete=False))
+    due_date = request.form.get("date")
+    db.session.add(Todo(task_name=task_name, complete=False, input_date=datetime.now()))
     db.session.commit()
     return redirect(url_for("home_page"))
 
@@ -40,6 +44,5 @@ def delete(todo_id):
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
-        db.session.add(Todo(task_name="Do the dishes", complete=False))
         db.session.commit()
     app.run(debug=True)
