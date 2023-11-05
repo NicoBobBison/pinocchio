@@ -33,6 +33,7 @@ function updateClock() {
 
         var dueDate = (dates[i].innerHTML.split(" "))[0]
         var dueTime = (dates[i].innerHTML.split(" "))[1]
+        var amPm = (dates[i].innerHTML.split(" "))[2]
         console.log(dueTime)
         
         var [hours, minute] = dueTime.split(":").map(Number);
@@ -46,7 +47,12 @@ function updateClock() {
             now.getFullYear()].join('/');
 
         var date1 = new Date(dueDate);
-        date1.setHours(hours);
+        if (amPm == "AM") {
+            date1.setHours(hours);
+        } else {
+            date1.setHours(hours + 12);
+        }
+        
         date1.setMinutes(minute);
         console.log(date1)
         var date2 = new Date(date);
