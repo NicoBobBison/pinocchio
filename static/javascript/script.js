@@ -32,6 +32,7 @@ function toggleModal() {
         modalOverlay.style.display = "none";
         modalContainer.style.display = "none";
     } else {
+        console.log("toggle")
         modalOverlay.style.display = "flex";
         modalContainer.style.display = "inline-flex";
     }
