@@ -6,6 +6,91 @@
     <title>Pinocchio</title>
 </head>
 <body>
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+        <div class="modal-box">
+            <div class="x-button-holder">
+                <img src="{{url_for('static', filename='css/images/x button.png')}}" id="x-button"/>
+            </div>
+            <div class="modal-title-holder">
+                <span id="modal-title-text">
+                    Create New Task
+                </span>
+            </div>
+            <div class="modal-input-container">
+                <div class="modal-label-holder">
+                    <span id="modal-label-text">
+                        Name
+                    </span>
+                </div>
+                <div class="modal-multiple-input-wrapper">
+                    <div class="modal-input-holder">
+                        <span id="modal-input-text">
+                            Name
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-input-container">
+                <div class="modal-label-holder">
+                    <span id="modal-label-text">
+                        Date
+                    </span>
+                </div>
+                <div class="modal-multiple-input-wrapper">
+                    <div class="modal-input-holder" style="border-radius: 6px 0px 0px 6px;">
+                        <span id="modal-input-text">
+                            Month
+                        </span>
+                    </div>
+                    <div class="modal-input-holder" style="border-radius: 0px 0px 0px 0px;">
+                        <span id="modal-input-text">
+                            Day
+                        </span>
+                    </div>
+                    <div class="modal-input-holder" style="border-radius: 0px 6px 6px 0px;">
+                        <span id="modal-input-text">
+                            Year
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-input-container">
+                <div class="modal-label-holder">
+                    <span id="modal-label-text">
+                        Time
+                    </span>
+                </div>
+                <div class="modal-multiple-input-wrapper">
+                    <div class="modal-input-holder" style="border-radius: 6px 0px 0px 6px;">
+                        <span id="modal-input-text">
+                            Hour
+                        </span>
+                    </div>
+                    <div class="modal-input-holder" style="border-radius: 0px 0px 0px 0px;">
+                        <span id="modal-input-text">
+                            Minute
+                        </span>
+                    </div>
+                    <div class="modal-input-dropdown" style="border-radius: 0px 6px 6px 0px;">
+                        <span id="modal-input-text">
+                            AM
+                        </span>
+                        <img src="{{url_for('static', filename='css/images/up.png')}}" id="dropdown"></div>
+                    </div>
+            </div>
+            <div class="button-spacer">
+                <div class="login-container">
+                    <button type="button" id="login-button">
+                        <span id="button-text">
+                            Save
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
     <div class="global-container">
         <div class="body-container">
             <div class="navbar-container">
