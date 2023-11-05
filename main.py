@@ -36,7 +36,12 @@ def add():
     # get("") should take in the name of the input field for the name
     task_name = request.form.get("task_name")
     try:
-        due_date = datetime(month=int(request.form.get("Month")),day=int(request.form.get("Day")),year=int(request.form.get("Year")),hour=int(request.form.get("Hour")),minute=int(request.form.get("Minute")))
+        due_hour = 0
+        if request.form.get("modal-input-dropdown") == "PM":
+            due_hour = 12
+        due_hour += int(request.form.get("Hour"))
+        print(due_hour)
+        due_date = datetime(month=int(request.form.get("Month")),day=int(request.form.get("Day")),year=int(request.form.get("Year")),hour=due_hour,minute=int(request.form.get("Minute")))
         db.session.add(Todo(task_name=task_name, complete=False, input_date=datetime.now(), due_date=due_date))
         db.session.commit()
         return redirect(url_for("home_page"))
