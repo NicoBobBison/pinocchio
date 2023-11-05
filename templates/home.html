@@ -119,7 +119,7 @@
                             <span class="checkedText">{{todo.task_name}}</span>
                         {% endif %}
                         <div class="date-container">
-                            <span class="date-text">{{todo.due_date.month}}/{{todo.due_date.day}}/{{todo.due_date.year}} {{todo.due_date.hour}}:{{todo.due_date.minute}} {{todo.amPM}}</span>
+                            <span class="date-text">{{todo.due_date.month}}/{{todo.due_date.day}}/{{todo.due_date.year}} {{todo.due_date.hour%12}}:{{todo.due_date.minute}} {{todo.amPM}}</span>
                             <div class="ellipse-align">
                                 <img src="{{url_for('static', filename='css/images/ellipse.png')}}" id="ellipse"/>
                             </div>
