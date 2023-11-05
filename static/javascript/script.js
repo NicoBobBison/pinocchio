@@ -6,9 +6,15 @@ taskSection.addEventListener("click", function (e) {
         if (e.target.className === "uncheckedBox"){
             e.target.classList.replace("uncheckedBox", "checkedBox")
             e.target.nextElementSibling.classList.replace("uncheckedText", "checkedText")
+            
+            let check = document.createElement("img");
+            check.src = "/static/css/images/check.png";
+            check.id = "check";
+            e.target.prepend(check);
         } else {
             e.target.classList.replace("checkedBox", "uncheckedBox")
             e.target.nextElementSibling.classList.replace("checkedText", "uncheckedText")
+            e.target.firstElementChild.remove();
         }
     }
     else if (e.target.className === "uncheckedText") {
