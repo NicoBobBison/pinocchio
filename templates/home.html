@@ -8,8 +8,8 @@
 <body>
     <div class="modal-overlay"></div>
     <div class="modal-container">
-        <div class="modal-box">
-            <button class="x-button-holder">
+        <form class="modal-box" action="/add" method="post">
+            <button formaction="" class="x-button-holder">
                 <img src="{{url_for('static', filename='css/images/x button.png')}}" id="x-button"/>
             </button>
             <div class="modal-title-holder">
@@ -24,7 +24,7 @@
                     </span>
                 </div>
                 <div class="modal-multiple-input-wrapper">
-                    <input type="text" class="modal-input-holder" placeholder="Name">
+                    <input type="text" name="task_name" class="modal-input-holder" placeholder="Name">
                 </div>
             </div>
             <div class="modal-input-container">
@@ -34,9 +34,9 @@
                     </span>
                 </div>
                 <div class="modal-multiple-input-wrapper">
-                    <input type="text" class="modal-input-holder" style="border-radius: 6px 0px 0px 6px;" placeholder="Month">
-                    <input type="text" class="modal-input-holder" style="border-radius: 0px 0px 0px 0px;" placeholder="Day">
-                    <input type="text" class="modal-input-holder" style="border-radius: 0px 6px 6px 0px;" placeholder="Year">
+                    <input type="text" class="modal-input-holder" name="Month" style="border-radius: 6px 0px 0px 6px;" placeholder="Month">
+                    <input type="text" class="modal-input-holder" name="Day" style="border-radius: 0px 0px 0px 0px;" placeholder="Day">
+                    <input type="text" class="modal-input-holder" name="Year" style="border-radius: 0px 6px 6px 0px;" placeholder="Year">
                 </div>
             </div>
             <div class="modal-input-container">
@@ -46,8 +46,8 @@
                     </span>
                 </div>
                 <div class="modal-multiple-input-wrapper">
-                    <input type="text" class="modal-input-holder" style="border-radius: 6px 0px 0px 6px;" placeholder="Hour">
-                    <input type="text" class="modal-input-holder" style="border-radius: 0px 0px 0px 0px;" placeholder="Minute">
+                    <input type="text" class="modal-input-holder" name="Hour" style="border-radius: 6px 0px 0px 6px;" placeholder="Hour">
+                    <input type="text" class="modal-input-holder" name="Minute" style="border-radius: 0px 0px 0px 0px;" placeholder="Minute">
                     <select name="modal-input-dropdown" id="modal-input-dropdown" class="modal-input-dropdown" style="border-radius: 0px 6px 6px 0px;">
                         <option value="AM">AM</option>
                         <option value="PM">PM</option>
@@ -62,15 +62,14 @@
             </div>
             <div class="button-spacer">
                 <div class="login-container">
-                    <button type="button" class="button">
+                    <button type="submit" class="button">
                         <span class="button-text">
                             Save
                         </span>
                     </button>
                 </div>
             </div>
-        </div>
-    </div>
+        </form>
     </div>
     <div class="global-container">
         <div class="body-container">
@@ -120,11 +119,11 @@
                             <span class="checkedText">{{todo.task_name}}</span>
                         {% endif %}
                         <div class="date-container">
-                            <span class="date-text">October 12th, 2020</span>
+                            <span class="date-text">{{todo.due_date.month}}/{{todo.due_date.day}}/{{todo.due_date.year}}</span>
                             <div class="ellipse-align">
                                 <img src="{{url_for('static', filename='css/images/ellipse.png')}}" id="ellipse"/>
                             </div>
-                            <span class="time-text">4:20</span>
+                            <span class="time-text">{{todo.due_date.hour}}:{{todo.due_date.minute}}</span>
                             <a href="/delete/{{todo.id}}">
                                 <button class="trash-can">
                                     <img src="{{url_for('static', filename='css/images/trash-can.png')}}" id="trash-can"/>
@@ -148,24 +147,6 @@
                 <div style="width: 698px; height: 392px; left: -828px; top: -200px; position: absolute; border-radius: 9999px; border: 14px #E77B4D solid"></div>
                 <div class="checklist-line-divider"></div>
             </div>
-        </div>
-        <div class="model">
-            <h1>Create Task</h1>
-            <label for="name">Name</label>
-            <input type="text" id="name"/>
-
-            <label for="date">Date</label>
-            <input type="date" id="date"/>
-
-            <div class="time-container">
-                <label for="hour">Hour</label>
-                <input type="text" id="hour"/>
-
-                <label for="minute">Minute</label>
-                <input type="text" id="minute"/>
-            </div>
-
-            <button type="button" id="submit">Submit</button>
         </div>
     </div>
     <script src="{{url_for('static', filename='javascript/script.js')}}"></script>

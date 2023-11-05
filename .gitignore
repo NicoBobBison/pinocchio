@@ -6,3 +6,4 @@ __pycache__/main.cpython-312.pyc
 *.sqlite
 instance/db.sqlite
 *.sqlite
+instance/db.sqlite
