@@ -23,8 +23,12 @@ def home_page():
     todo_list = Todo.query.all()
     for todo in todo_list:
         todo.due_date = lie(todo.input_date, todo.due_date)
-    print("render home")
+    todo_list.sort(key=getTodoOrder)
     return render_template('home.html', todo_list=todo_list)
+
+
+def getTodoOrder(todo):
+    return todo.due_date - datetime.now()
 
 
 @app.route('/add', methods=['POST'])
@@ -43,7 +47,8 @@ def add():
 @app.route('/cancel', methods=['POST'])
 def cancel_to_home():
     todo_list = Todo.query.all()
-    return render_template('home.html', todo_list=todo_list)
+    return redirect(url_for("home_page"))
+
 
 @app.route("/delete/<int:todo_id>")
 def delete(todo_id):
