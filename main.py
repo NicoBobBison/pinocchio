@@ -29,6 +29,14 @@ def add():
     return redirect(url_for("home_page"))
 
 
+@app.route("/delete/<int:todo_id>")
+def delete(todo_id):
+    todo = Todo.query.filter_by(id=todo_id).first()
+    db.session.delete(todo)
+    db.session.commit()
+    return redirect(url_for("home_page"))
+
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()

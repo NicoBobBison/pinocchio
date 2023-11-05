@@ -21,6 +21,7 @@ taskSection.addEventListener("click", function (e) {
         alert("instructions to edit task name")
     }
     else if (e.target.id === "trash-can") {
+        // Call a function in main.py to delete item
         e.target.parentElement.parentElement.parentElement.remove();
     }
 }, false)
