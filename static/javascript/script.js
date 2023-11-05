@@ -61,15 +61,21 @@ function updateClock() {
         date2.setSeconds(now.getSeconds());
         console.log(date2)
 
-        //var diffTime = Math.abs(date2 - date1);
+        var diffSign = date1 - date2;
 
         var time1 = (date1.getHours() * 60 * 60) + (date1.getMinutes() * 60) + (date1.getSeconds());
         var time2 = (date2.getHours() * 60 * 60) + (date2.getMinutes() * 60) + (date2.getSeconds());
         console.log(time1)
         console.log(time2)
+
         var diffTime = Math.abs(time2 - time1);
+        if (diffSign < 0) {
+            diffTime = 0;
+            diffSign = 0;
+        }
         
-        var diffHours = Math.floor(diffTime / (60 * 60));
+        
+        var diffHours = Math.floor(diffTime / (60 * 60)) + 24 * Math.floor(diffSign / (1000 * 60 * 60 * 24));
         console.log(diffHours)
         var diffMinutes = Math.floor((diffTime / (60)) % 60);
         console.log(diffMinutes)
