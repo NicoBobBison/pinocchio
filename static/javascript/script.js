@@ -20,9 +20,6 @@ taskSection.addEventListener("click", function (e) {
             e.target.firstElementChild.remove();
         }
     }
-    else if (e.target.className === "uncheckedText") {
-        alert("instructions to edit task name")
-    }
     else if (e.target.id === "trash-can") {
         // Call a function in main.py to delete item
         e.target.parentElement.parentElement.parentElement.remove();
