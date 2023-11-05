@@ -1,4 +1,5 @@
-from datetime import datetime
+from datetime import datetime, timedelta
+import random
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 
@@ -20,6 +21,9 @@ class Todo(db.Model):
 @app.route('/home')
 def home_page():
     todo_list = Todo.query.all()
+    for todo in todo_list:
+        todo.due_date = lie(todo.input_date, todo.due_date)
+    print("render home")
     return render_template('home.html', todo_list=todo_list)
 
 
@@ -27,10 +31,14 @@ def home_page():
 def add():
     # get("") should take in the name of the input field for the name
     task_name = request.form.get("task_name")
-    due_date = datetime(month=int(request.form.get("Month")),day=int(request.form.get("Day")),year=int(request.form.get("Year")),hour=int(request.form.get("Hour")),minute=int(request.form.get("Minute")))
-    db.session.add(Todo(task_name=task_name, complete=False, input_date=datetime.now(), due_date=due_date))
-    db.session.commit()
-    return redirect(url_for("home_page"))
+    try:
+        due_date = datetime(month=int(request.form.get("Month")),day=int(request.form.get("Day")),year=int(request.form.get("Year")),hour=int(request.form.get("Hour")),minute=int(request.form.get("Minute")))
+        db.session.add(Todo(task_name=task_name, complete=False, input_date=datetime.now(), due_date=due_date))
+        db.session.commit()
+        return redirect(url_for("home_page"))
+    except:
+        return redirect(url_for("home_page"))
+
 
 
 @app.route("/delete/<int:todo_id>")
@@ -39,6 +47,28 @@ def delete(todo_id):
     db.session.delete(todo)
     db.session.commit()
     return redirect(url_for("home_page"))
+
+
+windows = [365, 180, 60, 28, 21, 14, 7, 2]
+
+
+def lie(inputDate, dueDate):
+    delta = dueDate - inputDate
+    max_window = None
+
+    for i in windows:
+        if delta.days > i:
+            max_window = i
+            break
+
+    if max_window is None:
+        return dueDate
+
+    random.seed(inputDate.day * dueDate.day)
+    day_shift = (random.randrange(70, 85) / 100.0) * max_window
+    return_value = dueDate - timedelta(days=day_shift)
+    return datetime(return_value.year, return_value.month, return_value.day, dueDate.hour,
+                    dueDate.minute, dueDate.second, dueDate.microsecond)
 
 
 if __name__ == '__main__':
