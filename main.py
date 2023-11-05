@@ -15,6 +15,7 @@ class Todo(db.Model):
     complete = db.Column(db.Boolean)
     due_date = db.Column(db.DateTime)
     input_date = db.Column(db.DateTime)
+    amPM = db.Column(db.String(10))
 
 
 @app.route('/')
@@ -40,9 +41,8 @@ def add():
         if request.form.get("modal-input-dropdown") == "PM":
             due_hour = 12
         due_hour += int(request.form.get("Hour"))
-        print(due_hour)
         due_date = datetime(month=int(request.form.get("Month")),day=int(request.form.get("Day")),year=int(request.form.get("Year")),hour=due_hour,minute=int(request.form.get("Minute")))
-        db.session.add(Todo(task_name=task_name, complete=False, input_date=datetime.now(), due_date=due_date))
+        db.session.add(Todo(task_name=task_name, complete=False, input_date=datetime.now(), due_date=due_date, amPM=request.form.get("modal-input-dropdown")))
         db.session.commit()
         return redirect(url_for("home_page"))
     except:
