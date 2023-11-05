@@ -35,6 +35,13 @@ function updateClock() {
         var now = new Date() // current date
 
         var dueDate = (dates[i].innerHTML.split(" "))[0]
+        var dueTime = (dates[i].innerHTML.split(" "))[1]
+        console.log(dueTime)
+        
+        var [hours, minute] = dueTime.split(":").map(Number);
+
+        console.log(hours)
+        console.log(minute)
 
         var date = [
             (now.getMonth() + 1),
@@ -42,18 +49,36 @@ function updateClock() {
             now.getFullYear()].join('/');
 
         var date1 = new Date(dueDate);
+        date1.setHours(hours);
+        date1.setMinutes(minute);
+        console.log(date1)
         var date2 = new Date(date);
-        var diffTime = Math.abs(date2 - date1);
-        var diffHours = Math.floor(diffTime / (1000 * 60 * 60));
-        var diffMinutes = (diffTime / (1000 * 60)) % 24;
+        date2.setHours(now.getHours());
+        date2.setMinutes(now.getMinutes());
+        date2.setSeconds(now.getSeconds());
+        console.log(date2)
 
+        //var diffTime = Math.abs(date2 - date1);
+
+        var time1 = (date1.getHours() * 60 * 60) + (date1.getMinutes() * 60) + (date1.getSeconds());
+        var time2 = (date2.getHours() * 60 * 60) + (date2.getMinutes() * 60) + (date2.getSeconds());
+        console.log(time1)
+        console.log(time2)
+        var diffTime = Math.abs(time2 - time1);
+        
+        var diffHours = Math.floor(diffTime / (60 * 60));
+        console.log(diffHours)
+        var diffMinutes = Math.floor((diffTime / (60)) % 60);
+        console.log(diffMinutes)
+        var diffSeconds = Math.floor((diffTime) % 60);
+        console.log(diffSeconds)
 
         // set the content of the element with the ID time to the formatted string
         // dates[i].nextElementSibling.nextElementSibling.innerHTML = [date].join(' / ');
-        dates[i].nextElementSibling.nextElementSibling.innerHTML = diffHours + ":" + diffMinutes;
+        dates[i].nextElementSibling.nextElementSibling.innerHTML = diffHours + ":" + String(diffMinutes).padStart(2, '0') + ":" + String(diffSeconds).padStart(2, '0');
     }
     // call this function again in 1000ms
-    setTimeout(updateClock, 60000);
+    setTimeout(updateClock, 1000);
 }
 
 
