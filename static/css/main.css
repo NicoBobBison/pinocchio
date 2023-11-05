@@ -108,6 +108,9 @@ body {
     letter-spacing: 0.075px;
     word-wrap: break-word;
 }
+.button-text:hover {
+    cursor: pointer;
+}
 .login-button-icon {
     width: 14px; 
     height: 14px;
@@ -174,6 +177,7 @@ body {
     line-height: normal;
     letter-spacing: -1.8px;
 }
+
 .section-description {
     align-self: stretch;
     color: #86788E;
@@ -566,6 +570,10 @@ body {
     border-style: none;
     background-color: #FFFFFF;
 }
+.x-button-holder:hover {
+    cursor: pointer;
+}
+
 #x-button {
     width: 38px; 
     height: 38px;
