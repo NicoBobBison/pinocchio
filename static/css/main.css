@@ -564,6 +564,7 @@ body {
     align-items: center; 
     display: flex;
     border-style: none;
+    background-color: #FFFFFF;
 }
 #x-button {
     width: 38px; 
