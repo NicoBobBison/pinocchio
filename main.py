@@ -32,6 +32,10 @@ def add():
     db.session.commit()
     return redirect(url_for("home_page"))
 
+@app.route('/cancel', methods=['POST'])
+def cancel_to_home():
+    todo_list = Todo.query.all()
+    return render_template('home.html', todo_list=todo_list)
 
 @app.route("/delete/<int:todo_id>")
 def delete(todo_id):

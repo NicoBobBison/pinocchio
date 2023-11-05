@@ -27,7 +27,7 @@ taskSection.addEventListener("click", function (e) {
     }
 }, false)
 
-function openModal() {
+function toggleModal() {
     if (modalOverlay.style.display === "flex") {
         modalOverlay.style.display = "none";
         modalContainer.style.display = "none";

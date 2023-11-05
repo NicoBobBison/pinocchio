@@ -9,7 +9,7 @@
     <div class="modal-overlay"></div>
     <div class="modal-container">
         <form class="modal-box" action="/add" method="post">
-            <button formaction="" class="x-button-holder">
+            <button formaction="/cancel" class="x-button-holder" onclick="toggleModal()">
                 <img src="{{url_for('static', filename='css/images/x button.png')}}" id="x-button"/>
             </button>
             <div class="modal-title-holder">
@@ -102,7 +102,7 @@
                     </div>
                     <div class="checklist-line-divider"></div>
                 </div>
-                <div class="add-task-section" onclick="openModal()">
+                <div class="add-task-section" onclick="toggleModal()">
                     <img src="{{url_for('static', filename='css/images/plus-circle.png')}}" id="plus"/>
                     <span class="addTaskText">Add New Task</span>
                 </div>
