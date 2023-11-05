@@ -96,7 +96,7 @@ body {
     display: flex;
     border-style: none;
 }
-#button-text {
+.button-text {
     color: #FFF;
     text-align: center;
 
@@ -437,7 +437,7 @@ body {
     gap: 10px;
     display: flex;
 }
-#modal-title-text {
+.modal-title-text {
     align-self: stretch; 
     text-align: center; 
     color: #1F2937; 
@@ -462,7 +462,7 @@ body {
     align-items: flex-start; 
     display: inline-flex;
 }
-#modal-label-text {
+.modal-label-text {
     flex: 1 1 0; 
     color: #1F2937; 
     font-size: 14px; 
