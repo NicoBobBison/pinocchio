@@ -62,7 +62,7 @@ body {
     align-items: center;
     gap: 35px;
     display: inline-flex;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
 }
 .navbar-container {
     align-self: stretch; 
