@@ -57,9 +57,11 @@
                                 <img src="{{url_for('static', filename='css/images/ellipse.png')}}" id="ellipse"/>
                             </div>
                             <span class="time-text">4:20</span>
-                            <div class="trash-can">
-                                <img src="{{url_for('static', filename='css/images/trash-can.png')}}" id="trash-can"/>
-                            </div>
+                            <a href="/delete/{{todo.id}}">
+                                <button class="trash-can">
+                                    <img src="{{url_for('static', filename='css/images/trash-can.png')}}" id="trash-can"/>
+                                </button>
+                            </a>
                         </div>
                     </div>
                 {% endfor %}
