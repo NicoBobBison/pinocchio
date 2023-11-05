@@ -110,7 +110,7 @@
                     <div class="task-section">
         <!--                <input class="uncheckedBox" type="checkbox">-->
                         {% if todo.complete == False %}
-                            <button type="button" class="uncheckedBox"></button>
+                            <button type="button" class="uncheckedBox" id="{{todo.id}}"></button>
                             <span class="uncheckedText">{{todo.task_name}}</span>
                         {% else %}
                             <button type="button" class="checkedBox">
@@ -119,11 +119,11 @@
                             <span class="checkedText">{{todo.task_name}}</span>
                         {% endif %}
                         <div class="date-container">
-                            <span class="date-text">{{todo.due_date.month}}/{{todo.due_date.day}}/{{todo.due_date.year}}</span>
+                            <span class="date-text">{{todo.due_date.month}}/{{todo.due_date.day}}/{{todo.due_date.year}} {{todo.due_date.hour}}:{{todo.due_date.minute}}</span>
                             <div class="ellipse-align">
                                 <img src="{{url_for('static', filename='css/images/ellipse.png')}}" id="ellipse"/>
                             </div>
-                            <span class="time-text">{{todo.due_date.hour}}:{{todo.due_date.minute}}</span>
+                            <span class="time-text">DOG</span>
                             <a href="/delete/{{todo.id}}">
                                 <button class="trash-can">
                                     <img src="{{url_for('static', filename='css/images/trash-can.png')}}" id="trash-can"/>
