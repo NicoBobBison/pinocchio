@@ -10,6 +10,7 @@ body {
 }
 .global-container {
     position: relative;
+    min-height: 100%;
 }
 .gradient-container {
     position: absolute; /* Sit on top of the page content */
@@ -19,22 +20,35 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    padding-top: 64px;
-    padding-bottom: 0px;
+    overflow: hidden;
     z-index: -2; /* Specify a stack order in case you're using a different order for other elements */
+}
+.colors-clipper {
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
 }
 .colors-aligner {
     width: 100%; 
-    height: 100%; 
+    height: 100vh;
     flex-direction: column; 
     justify-content: flex-start; 
     align-items: center; 
-    display: inline-flex;
+    display: flex;
     /* overflow: hidden; */
 }
 .colors-container {
+    align-self: stretch; 
     filter: blur(120px);
     z-index: -4;
+    position: relative;
+    left: 45%;
 }
 .gradient {
     height: 326px; 
@@ -48,6 +62,7 @@ body {
     align-items: center;
     gap: 35px;
     display: inline-flex;
+    padding-bottom: 60px;
 }
 .navbar-container {
     align-self: stretch; 
@@ -389,9 +404,10 @@ body {
 /*flex*/
 .modal-overlay {
     width: 100%; 
-    height: 100%; 
+    height: 100%;
     background: rgba(107, 114, 128, 0.30);
-    position: absolute; /* Sit on top of the page content */
+    stroke:none;
+    position: fixed; /* Sit on top of the page content */
     top: 0;
     left: 0;
     right: 0;
@@ -400,6 +416,7 @@ body {
     padding-bottom: 690px;
     z-index: 4;
     display: none;
+    border-style: none;
 }
 /*inline-flex*/
 .modal-container {
